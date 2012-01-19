@@ -9,7 +9,7 @@
  * - closestChild: Get the closest parent that is a child of selector.
  * - truncated: Make the selected elements truncated with a link to expand them.
  *
- * Sponsored by Examiner.com
+ * Sponsored by Examiner.com. Licensed under GNU GPL v3.
  */
 
 (function ($, document) {
@@ -202,6 +202,9 @@
    *   Class to be added to the toggler.
    * @param {String|Number} [options.toggleSpeed="fast"]
    *   Speed of the reveal animation.
+   *
+   * @returns {jQuery}
+   *   The original jQuery object for chainability.
    */
   fn.truncated = function (minLength, options) {
     var i = 0, l = this.length, cur, truncated,

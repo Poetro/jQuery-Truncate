@@ -12,7 +12,7 @@ Sponsored by [Examiner.com](http://www.examiner.com). Licensed under GNU GPL v3.
 
 ###truncated
 
-Make the selected elements truncated with a link to expand it.
+Make the selected elements truncated with a link to expand it. [Example](http://jsfiddle.net/Poetro/DAxsH/).
 
 ####Parameters:
   * *{Number}* **minLength**

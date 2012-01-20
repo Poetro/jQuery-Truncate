@@ -60,9 +60,9 @@
         // Get the text from text nodes and CDATA nodes.
         if (elem.nodeType === 3 || elem.nodeType === 4) {
           // Trim the value if the text is still empty.
-          text += text ? elem.nodeValue : elem.nodeValue.replace(/^\s+/, '');
+          text += text ? elem.nodeValue : elem.nodeValue.replace(/^\s+/g, '');
           if (truncateWhitespace) {
-            text.replace(/\s+/, ' ');
+            text.replace(/\s+/g, ' ');
           }
           // Check if the text is enough.
           if (text.length >= minLength) {

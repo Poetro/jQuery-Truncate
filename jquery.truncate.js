@@ -62,7 +62,7 @@
           // Trim the value if the text is still empty.
           text += text ? elem.nodeValue : elem.nodeValue.replace(/^\s+/g, '');
           if (truncateWhitespace) {
-            text.replace(/\s+/g, ' ');
+            text = text.replace(/\s+/g, ' ');
           }
           // Check if the text is enough.
           if (text.length >= minLength) {

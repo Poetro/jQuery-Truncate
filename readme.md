@@ -77,20 +77,21 @@ Get the truncated text of the first selected element. The truncated text will be
 
 ####Example:
 ```html
-  <ul>
-    <li><a href="" id="id-1">Item 1</a></li>
-    <li><a href="" id="id-2">Item 2</a></li>
-    <li><a href="" id="id-3">Item 3</a></li>
-    <li><a href="" id="id-4">Item 4</a></li>
-  </ul>
+<ul>
+  <li class="item-1"><a href="#href-1" class="link-1">Item 1.</a></li>
+  <li class="item-2"><a href="#href-2" class="link-2">Item 2.</a></li>
+  <li class="item-3"><a href="#href-3" class="link-3">Item 3.</a></li>
+  <li class="item-4"><a href="#href-4" class="link-4">Item 4.</a></li>
+</ul>
 ```
 
 ```javascript
-  $('ul').truncate(20, {sentenceSafe: false, retType: 'text'});
+$('ul').truncate(20, {sentenceSafe: false, retType: 'text'});
 ```
 
+Output:
 ```cmd
-  "Item 1\n Item 2\n Item"
+"Item 1. Item 2. Item"
 ```
 
 ###closestChild
@@ -113,18 +114,19 @@ Get the closest parent that is a child of selector.
 
 ####Example:
 ```html
-  <ul>
-    <li class="item-1"><a href="#href-1" class="link-1">Item 1.</a></li>
-    <li class="item-2"><a href="#href-2" class="link-2">Item 2.</a></li>
-    <li class="item-3"><a href="#href-3" class="link-3">Item 3.</a></li>
-    <li class="item-4"><a href="#href-4" class="link-4">Item 4.</a></li>
-  </ul>
+<ul>
+  <li class="item-1"><a href="#href-1" class="link-1">Item 1.</a></li>
+  <li class="item-2"><a href="#href-2" class="link-2">Item 2.</a></li>
+  <li class="item-3"><a href="#href-3" class="link-3">Item 3.</a></li>
+  <li class="item-4"><a href="#href-4" class="link-4">Item 4.</a></li>
+</ul>
 ```
 
 ```javascript
-  console.log($('.link-1, .link-4').closestChild('ul'));
+console.log($('.link-1, .link-4').closestChild('ul'));
 ```
 
+Output:
 ```cmd
 jQuery(li.item-1, li.item-4)
 ```

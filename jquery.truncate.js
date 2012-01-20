@@ -149,9 +149,9 @@
    *   The element within which a matching element may be found. If no context
    *   is passed in then the context of the jQuery set will be used instead.
    *
-   * @returns
-   *   The child of root, that is a parent of element or an emty jQuery object
-   *   if non found.
+   * @returns {jQuery}
+   *   The child of root (defined by the selector), that is a parent of element or an empty jQuery object
+   *   if none found.
    */
   fn.closestChild = function (selector, context) {
     var pos = $.expr.match.POS.test(selector) || typeof selector !== "string" ?
@@ -191,7 +191,7 @@
    * @param {Number} minLength
    *   Minimal length of the truncated text.
    * @param {Object} options
-   *   Combined options of truncate and closestChild plus the following:
+   *   Options of truncate plus the following:
    * @param {String} [options.wrapper="<div></div>"]
    *   HTML fragment to be used as a wrapper for the hidden part.
    * @param {String} [options.wrapperClass="element-hidden"]

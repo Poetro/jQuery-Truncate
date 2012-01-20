@@ -19,7 +19,7 @@ Make the selected elements truncated with a link to expand it. [Example](http://
 
     Minimal length of the truncated text.
   * *{Object}* **options**
-    Combined options of truncate and closestChild plus the following:
+    Options of `truncate` plus the following:
     * *{String}* **options.wrapper** Optional, Default: *`"<div></div>"`*
 
         HTML fragment to be used as a wrapper for the hidden part.
@@ -109,4 +109,22 @@ Get the closest parent that is a child of selector.
 
 ####Returns:
 
-*{jQuery}* The child of root, that is a parent of element or an emty jQuery object if non found.
+*{jQuery}* The child of root (defined by the `selector`), that is a parent of element or an empty jQuery object if none found.
+
+####Example:
+```html
+  <ul>
+    <li class="item-1"><a href="#href-1" class="link-1">Item 1.</a></li>
+    <li class="item-2"><a href="#href-2" class="link-2">Item 2.</a></li>
+    <li class="item-3"><a href="#href-3" class="link-3">Item 3.</a></li>
+    <li class="item-4"><a href="#href-4" class="link-4">Item 4.</a></li>
+  </ul>
+```
+
+```javascript
+  console.log($('.link-1, .link-4').closestChild('ul'));
+```
+
+```cmd
+jQuery(li.item-1, li.item-4)
+```

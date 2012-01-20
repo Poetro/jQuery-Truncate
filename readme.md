@@ -90,6 +90,7 @@ $('ul').truncate(20, {sentenceSafe: false, retType: 'text'});
 ```
 
 Output:
+
 ```cmd
 "Item 1. Item 2. Item"
 ```
@@ -127,6 +128,7 @@ console.log($('.link-1, .link-4').closestChild('ul'));
 ```
 
 Output:
+
 ```cmd
 jQuery(li.item-1, li.item-4)
 ```
